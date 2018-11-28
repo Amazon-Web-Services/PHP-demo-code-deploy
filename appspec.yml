@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/demAppForCodeDeploy
+hooks:
+  AfterInstall:
+    - location: scripts/check_deploy.sh
+      timeout: 300
+      runas: root
